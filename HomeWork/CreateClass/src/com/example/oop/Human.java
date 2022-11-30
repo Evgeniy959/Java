@@ -1,10 +1,16 @@
 package com.example.oop;
 
 public class Human {
-    String firstName = "";
-    String lastName = " ";
-    int age = 0;
+    public String firstName;
+    public String lastName;
+    public int age;
 
+    {
+        System.out.println("CALL INIT BLOC");
+        firstName = "NoName";
+        lastName = "NoLastName";
+        age = 0;
+    }
     public Human() {
     }
 
