@@ -4,7 +4,7 @@ public class Tiger extends Animal {
 
     public Tiger() {
 
-        super("Тигр это ", "млекопитающий, ", "хищник, ");
+        super("Тигр", "млекопитающий, ", "хищник, ");
         super.movement("бежит!");
     }
 }

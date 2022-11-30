@@ -9,7 +9,7 @@ public class Animal {
         this.name = name;
         this.grade = grade;
         this.detachment = detachment;
-        System.out.print(name+grade+detachment);
+        System.out.print(name+" - "+grade+detachment);
     }
 
     public void movement(String move) {
