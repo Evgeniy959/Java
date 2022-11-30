@@ -1,9 +1,9 @@
 package com.example.oop.modelAnimal;
 
 public class Animal {
-    String name = "";
-    String detachment = "";
-    String grade = "";
+    String name;
+    String detachment;
+    String grade;
 
     public Animal(String name, String grade, String detachment) {
         this.name = name;

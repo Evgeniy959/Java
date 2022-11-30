@@ -1,10 +1,10 @@
 package com.example.oop.modelHuman;
 
 public class Human {
-    String firstName = "";
-    String lastName = " ";
-    int age = 0;
-    public String post = "";
+    public String firstName;
+    public String lastName;
+    public int age;
+    public String post;
 
     public Human(String firstName, String lastName, int age, String post) {
         this.firstName = firstName;
