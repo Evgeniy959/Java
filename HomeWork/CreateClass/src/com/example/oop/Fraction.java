@@ -99,6 +99,17 @@ public class Fraction {
         return result;
     }
 
+    public static Fraction multiply(Fraction left, Fraction right1, Fraction right2)
+    {
+        left.to_improper();
+        right1.to_improper();
+        right2.to_improper();
+        Fraction result = new Fraction(left.numerator*right1.numerator* right2.numerator,left.denominator*right1.denominator* right2.denominator);
+        result.reduce();
+        result.print();
+        return result;
+    }
+
     public static Fraction division(Fraction left, Fraction right)
     {
         left.to_improper();

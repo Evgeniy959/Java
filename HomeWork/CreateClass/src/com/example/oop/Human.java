@@ -6,8 +6,7 @@ public class Human {
     public int age;
 
     {
-        System.out.println("CALL INIT BLOC");
-        firstName = "NoName";
+        firstName = "Tom";
         lastName = "NoLastName";
         age = 0;
     }
@@ -35,5 +34,15 @@ public class Human {
     public Human(String firstName, String lastName, int age) {
         this(firstName, age);
         this.lastName = lastName;
+    }
+
+    public static void movement() {
+        Human human = new Human();
+        System.out.println(human.firstName+" идет");
+    }
+
+    public static void movement(String move) {
+        Human human = new Human();
+        System.out.println(human.firstName+move);
     }
 }
