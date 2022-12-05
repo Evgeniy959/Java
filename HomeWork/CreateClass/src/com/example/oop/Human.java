@@ -8,7 +8,7 @@ public class Human {
     {
         firstName = "Tom";
         lastName = "NoLastName";
-        age = 0;
+        age = 23;
     }
     public Human() {
     }

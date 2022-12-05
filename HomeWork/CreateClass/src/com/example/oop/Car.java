@@ -6,7 +6,7 @@ public class Car {
     public String nameCar;
     public String maker;
     public String yearRelease;
-    public int engineVolume;
+    public double engineVolume;
 
     public String getNameCar() {
         return nameCar;
@@ -14,14 +14,6 @@ public class Car {
 
     public String getMaker() {
         return maker;
-    }
-
-    public String getYearRelease() {
-        return yearRelease;
-    }
-
-    public int getEngineVolume() {
-        return engineVolume;
     }
 
     Scanner in = new Scanner(System.in);
@@ -34,7 +26,7 @@ public class Car {
         System.out.print("Введите год выпуска: ");
         this.yearRelease = in.nextLine();
         System.out.print("Введите  объём двигателя: ");
-        this.engineVolume = in.nextInt();
+        this.engineVolume = in.nextDouble();
         System.out.println("Название автомобиля: "+this.nameCar+","+" производитель: "+this.maker+","+" год выпуска: "+this.yearRelease+","+" объём двигателя: "+this.engineVolume);
     }
 
@@ -53,7 +45,27 @@ public class Car {
         System.out.print("Введите год выпуска: ");
         this.yearRelease = in.nextLine();
         System.out.print("Введите  объём двигателя: ");
-        this.engineVolume = in.nextInt();
+        this.engineVolume = in.nextDouble();
         System.out.println("Название автомобиля: "+this.nameCar+","+" производитель: "+this.maker+","+" год выпуска: "+this.yearRelease+","+" объём двигателя: "+this.engineVolume);
+    }
+
+    public Car show(String nameCar, String maker, String yearRelease){
+        this.nameCar = nameCar;
+        this.maker = maker;
+        this.yearRelease = yearRelease;
+        return this;
+    }
+
+    public void show(String nameCar, String maker){
+        this.nameCar = nameCar;
+        this.maker = maker;
+        System.out.println("Название автомобиля: "+this.getNameCar()+","+" производитель: "+this.getMaker());
+    }
+
+    public void show1(String nameCar, String maker, double engineVolume){
+        this.nameCar = nameCar;
+        this.maker = maker;
+        this.engineVolume = engineVolume;
+        System.out.println("Название автомобиля: "+this.nameCar+","+" производитель: "+this.maker+","+" объём двигателя: "+this.engineVolume);
     }
 }

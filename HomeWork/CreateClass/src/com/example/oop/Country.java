@@ -14,6 +14,7 @@ public class Country {
     }
 
     public Country(double population) {
+
         this.population = population;
     }
 

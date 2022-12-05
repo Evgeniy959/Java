@@ -39,7 +39,7 @@ public class Main {
         Fraction division1 = Fraction.division(A1, B1);
 
         // Класс Книга:
-        /*Book book = new Book("Гадюка в сиропе", "Дарья Донцова", "2016");
+        Book book = new Book("За всеми зайцами", "Дарья Донцова", "2007");
         Book book1 = new Book();
         book.show();
         Book show = book1.show("Роковой подарок", "Татьяна Устинова", "2022");
@@ -51,11 +51,15 @@ public class Main {
         String namePublishingHouse =in.nextLine();
         System.out.print("Введите жанр книги: ");
         String genre = in.nextLine();
-        Book book2 = new Book(namePublishingHouse, genre);*/
+        Book book2 = new Book(namePublishingHouse, genre);
 
         // Класс Автомобиль:
-        Car car = new Car("Тойота", "Япония", "2008");
-        //Car car1 = new Car();
+        Car car = new Car("Toyota RAV4", "Япония", "2008");
+        Car car1 = new Car();
         car.show();
+        Car info = car.show("Honda Fit", "Япония", "2017");
+        System.out.println("Название автомобиля: "+ info.getNameCar()+","+" производитель: "+info.maker+","+" год выпуска: "+info.yearRelease);
+        car.show("Toyota Camry", "Япония");
+        car.show1("Toyota Camry", "Япония", 2.5);
     }
 }
