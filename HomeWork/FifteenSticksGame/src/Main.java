@@ -26,13 +26,13 @@ public class Main {
         while (sticksCount>0){
             if(sticksCount==1){
                 System.out.println("Gamer1 Вы проиграли!"); break;}
-            else System.out.println("Gamer1");
+            else System.out.println("Gamer1 введите число от 1 до 3");
             int a = in.nextInt();;
             sticksCount -=a;
             Game(sticksCount);
             if(sticksCount==1){
                 System.out.println("Gamer2 Вы проиграли!"); break;}
-            else System.out.println("Gamer2");
+            else System.out.println("Gamer2 введите число от 1 до 3");
             int b = in.nextInt();;
             sticksCount -=b;
             Game(sticksCount);
@@ -45,7 +45,7 @@ public class Main {
         while (sticksCount>0){
             if(sticksCount==1){
                 System.out.println("Вы проиграли!"); break;}
-            else System.out.println("Gamer");
+            else System.out.println("Gamer введите число от 1 до 3");
             int a = in.nextInt();;
             sticksCount -=a;
             Game(sticksCount);
