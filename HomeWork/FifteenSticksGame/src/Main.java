@@ -20,6 +20,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        int b=0;
         Scanner in = new Scanner(System.in);
         /*System.out.println("Start");
         Game(sticksCount);
@@ -27,26 +28,26 @@ public class Main {
             if(sticksCount==1){
                 System.out.println("Gamer1 Вы проиграли!"); break;}
             else System.out.println("Gamer1 введите число от 1 до 3");
-            int a = in.nextInt();;
+            int a = in.nextInt();
             sticksCount -=a;
             Game(sticksCount);
             if(sticksCount==1){
                 System.out.println("Gamer2 Вы проиграли!"); break;}
             else System.out.println("Gamer2 введите число от 1 до 3");
-            int b = in.nextInt();;
+            int b = in.nextInt();
             sticksCount -=b;
             Game(sticksCount);
         }*/
 
 // A game with artificial intelligence (PC)
 
-        System.out.println("Start");
+        /*System.out.println("Start");
         Game(sticksCount);
         while (sticksCount>0){
             if(sticksCount==1){
                 System.out.println("Вы проиграли!"); break;}
             else System.out.println("Gamer введите число от 1 до 3");
-            int a = in.nextInt();;
+            int a = in.nextInt();
             sticksCount -=a;
             Game(sticksCount);
             if(sticksCount==1){
@@ -67,7 +68,33 @@ public class Main {
                 sticksCount -=b;
                 Game(sticksCount);
             }
+        }*/
+
+        // A game with artificial intelligence (PC) a win-win algorithm
+
+        System.out.println("Start");
+        Game(sticksCount);
+        while (sticksCount>0){
+            if(sticksCount==1){
+                System.out.println("Вы выйграли!"); break;}
+            else System.out.println("PC");
+            if(sticksCount==15) {
+                int a = 2;
+                sticksCount -=a;
+                Game(sticksCount);
+            }
+            else {
+                int a = 4-b;
+                sticksCount -=a;
+                Game(sticksCount);}
+            if(sticksCount==1){
+                System.out.println("Вы проиграли!"); break;}
+            else System.out.println("Введите число от 1 до 3");
+            b = in.nextInt();
+            sticksCount -=b;
+            Game(sticksCount);
         }
+
 
     }
 }
