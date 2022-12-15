@@ -38,23 +38,35 @@ public class Main {
             Game(sticksCount);
         }*/
 
-// artificial intelligence
+// A game with artificial intelligence (PC)
 
         System.out.println("Start");
         Game(sticksCount);
         while (sticksCount>0){
             if(sticksCount==1){
                 System.out.println("Вы проиграли!"); break;}
-            else System.out.println("Gamer1");
+            else System.out.println("Gamer");
             int a = in.nextInt();;
             sticksCount -=a;
             Game(sticksCount);
             if(sticksCount==1){
                 System.out.println("Вы выйграли!"); break;}
             else System.out.println("PC");
-            int b = random(1, 3);
-            sticksCount -=b;
-            Game(sticksCount);
+            if(sticksCount==2) {
+                int b = random(1, 1);
+                sticksCount -=b;
+                Game(sticksCount);
+            }
+            else if(sticksCount==3) {
+                int b = random(1, 2);
+                sticksCount -=b;
+                Game(sticksCount);
+            }
+            else if (sticksCount>3){
+                int b = random(1, 3);
+                sticksCount -=b;
+                Game(sticksCount);
+            }
         }
 
     }
