@@ -20,7 +20,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int b=0;
+
         Scanner in = new Scanner(System.in);
         /*System.out.println("Start");
         Game(sticksCount);
@@ -72,7 +72,8 @@ public class Main {
 
         // A game with artificial intelligence (PC) a win-win algorithm
 
-        System.out.println("Start");
+        /*System.out.println("Start");
+        int b=0;
         Game(sticksCount);
         while (sticksCount>0){
             if(sticksCount==1){
@@ -93,8 +94,38 @@ public class Main {
             b = in.nextInt();
             sticksCount -=b;
             Game(sticksCount);
-        }
+        }*/
 
+        System.out.println("Start");
+        int b=0;
+        int a=0;
+        Game(sticksCount);
+        while (sticksCount>0){
+            if(sticksCount==1){
+                System.out.println("Вы проиграли!"); break;}
+            else System.out.println("Введите число от 1 до 3");
+            a = in.nextInt();
+            sticksCount -=a;
+            Game(sticksCount);
+            if(sticksCount==1){
+                System.out.println("Вы выйграли!"); break;}
+            else System.out.println("PC");
+            if(sticksCount==14 && a == 1) {
+                b = 1;
+                sticksCount -=b;
+                Game(sticksCount);
+            }
+            else if(sticksCount==12 && a == 3) {
+                b = 3;
+                sticksCount -=b;
+                Game(sticksCount);
+            }
+            else {
+                b = 4-a;
+                sticksCount -=b;
+                Game(sticksCount);
+            }
+        }
 
     }
 }
