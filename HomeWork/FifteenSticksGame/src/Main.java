@@ -125,6 +125,11 @@ public class Main {
                 sticksCount -=b;
                 Game(sticksCount);
             }
+            if(sticksCount==13 && a == 2) {
+                b = 1;
+                sticksCount -=b;
+                Game(sticksCount);
+            }
         }
 
     }
