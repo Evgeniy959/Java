@@ -3,16 +3,11 @@ import java.util.stream.Stream;
 
 public class Sort {
     public List<Integer> addSort(List<Integer> list1, List<Integer> list2){
-        boolean flag = false;
-        //List<Integer> list3 = list1;
-        //List<Integer> list3 = Stream.concat(list1.stream(), list2.stream()).toList();
         List<Integer> list3 = new ArrayList<Integer>(list1);
         list3.addAll(list2);
-        //list3.toArray();
         List<Integer> listRes = new ArrayList<>(){};
-        //List<String> newList = ListUtils.union(list1, list2);
         int size3=list1.size()+list2.size();
-        System.out.println(list3.size());
+        System.out.println(size3);
         System.out.println(list3);
         /*list3.remove(2);
         System.out.println(list3);*/
