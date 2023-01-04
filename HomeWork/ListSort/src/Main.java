@@ -23,7 +23,6 @@ public class Main {
         System.out.println(list1);
         System.out.println(list2);
         Sort sort = new Sort();
-        //sort.addSort(list1, list2);
         System.out.println(sort.addSort(list1, list2));
 
     }
