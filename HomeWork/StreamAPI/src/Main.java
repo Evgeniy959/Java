@@ -32,7 +32,7 @@ public class Main {
         //System.out.println(list.stream().filter(s->s.substring(1, 3)));
 
         //5) Из коллекции имен убрать все повтарения и найти среднюю длину имен;
-        List<String> result1 = list.stream().distinct().collect(Collectors.toList());
+        List<String> result1 = list.stream().distinct().filter(n->n.length());
         System.out.println(result1);
     }
 }
