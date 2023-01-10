@@ -32,12 +32,27 @@ public class Main {
         System.out.println(list1.stream().skip(6).findFirst().orElse("empty"));
 
         //4) Вернуть два элемента начиная со второго элемента коллекции;
-        int[] res = (list.stream().mapToInt(s ->Integer.parseInt(s.substring(1))).toArray());
-        System.out.println(Arrays.toString(res));
+        /*int[] res = (list.stream().mapToInt(s ->Integer.parseInt(s.substring(1))).toArray());
+        System.out.println(Arrays.toString(res));*/
+        System.out.println(list.stream().skip(1).limit(2).collect(Collectors.toList()));
 
         //5) Из коллекции имен убрать все повтарения и найти среднюю длину имен;
-        List<String> result1 = list.stream().distinct().filter(s->s.length()==2).collect(Collectors.toList());
-        System.out.println(result1);
+        List<String> average = new ArrayList<>(){};
+        average.add("Tom");
+        average.add("Nik");
+        average.add("Jon");
+        average.add("Alex");
+        average.add("Evgeniy");
+        average.add("Alex");
+        average.add("Tom");
+        //long resultAve = average.stream().distinct().reduce((s1,s2)->s1.length()+s2.length()).orElse("f");
+        List<String> resultAve = average.stream().distinct().collect(Collectors.toList());
+        System.out.println(resultAve);
+        System.out.println(resultAve.size());
+        List<String> resAve = average.stream().distinct().flatMap(s->Arrays.stream(s.split(""))).collect(Collectors.toList());
+        System.out.println(resAve);
+        System.out.println(resAve.size());
+        System.out.println(resAve.size()/resultAve.size());
 
         //6) Отсортировать коллекцию строк по убыванию и убрать дубликаты;
         System.out.println(list.stream().sorted((s1,s2)->s2.compareTo(s1)).distinct().collect(Collectors.toList()));
