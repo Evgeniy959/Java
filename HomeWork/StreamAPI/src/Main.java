@@ -1,4 +1,6 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -26,13 +28,32 @@ public class Main {
         System.out.println(Stream.of("a1", "a2", "a3", "a1", "a4", "a5", "a1").filter(n->n.contains("a3")).findFirst().orElseThrow());
 
         //3) Вернуть последний элемент коллекции или «empty», если коллекция пуста;
+        System.out.println(list.stream().skip(6).findFirst().orElse("empty"));
         System.out.println(list1.stream().skip(6).findFirst().orElse("empty"));
 
         //4) Вернуть два элемента начиная со второго элемента коллекции;
-        //System.out.println(list.stream().filter(s->s.substring(1, 3)));
+        int[] res = (list.stream().mapToInt(s ->Integer.parseInt(s.substring(1))).toArray());
+        System.out.println(Arrays.toString(res));
 
         //5) Из коллекции имен убрать все повтарения и найти среднюю длину имен;
-        List<String> result1 = list.stream().distinct().filter(n->n.length());
+        List<String> result1 = list.stream().distinct().filter(s->s.length()==2).collect(Collectors.toList());
         System.out.println(result1);
+
+        //6) Отсортировать коллекцию строк по убыванию и убрать дубликаты;
+        System.out.println(list.stream().sorted((s1,s2)->s2.compareTo(s1)).distinct().collect(Collectors.toList()));
+
+        //7) Вернуть сумму нечетных чисел или 0;
+        List<Integer> list2 = new ArrayList<>(){};
+        list2.add(1);
+        list2.add(5);
+        list2.add(10);
+        list2.add(12);
+        list2.add(15);
+        list2.add(20);
+        list2.add(21);
+        list2.add(22);
+
+        int result2 = list2.stream().filter(n->n%2==0).reduce((x,y)->x+y).orElse(0);
+        System.out.println(result2);
     }
 }
