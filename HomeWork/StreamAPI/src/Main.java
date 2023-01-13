@@ -7,7 +7,8 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
-        //Дана коллекция строк {"a1", "a2", "a3", "a1", "a4", "a5", "a1"}
+        //1) Дана коллекция строк {"a1", "a2", "a3", "a1", "a4", "a5", "a1"}
+        //Вернуть количество вхождений объекта «a1» с помощью streamAPI;
         List<String> list = new ArrayList<>(){};
         list.add("a1");
         list.add("a2");
@@ -18,7 +19,6 @@ public class Main {
         list.add("a1");
         System.out.println(list);
         List<String> list1 = new ArrayList<>(){};
-        //1) Вернуть количество вхождений объекта «a1» с помощью streamAPI;
         long result = list.stream().filter("a1"::equals).count();
         System.out.println(result);
         System.out.println(list.stream().filter("a1"::equals).count());
@@ -35,6 +35,7 @@ public class Main {
         /*int[] res = (list.stream().mapToInt(s ->Integer.parseInt(s.substring(1))).toArray());
         System.out.println(Arrays.toString(res));*/
         System.out.println(list.stream().skip(1).limit(2).collect(Collectors.toList()));
+        //System.out.println(list.stream().skip(1).limit(2).findAny().orElse("t"));
 
         //5) Из коллекции имен убрать все повтарения и найти среднюю длину имен;
         List<String> average = new ArrayList<>(){};
