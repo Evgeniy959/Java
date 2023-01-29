@@ -51,13 +51,19 @@
 
     <bean id="wheel16" class="com.topacademy.springapp.Wheel">
         <property name="diameter" value="16"/>
-        <property name="weight" value="20"/>
+        <property name="weight" value="25"/>
         <property name="price" value="80"/>
     </bean>
     <bean id="wheel15" class="com.topacademy.springapp.Wheel">
         <property name="diameter" value="15"/>
-        <property name="weight" value="20"/>
+        <property name="weight" value="28"/>
         <property name="price" value="85"/>
+    </bean>
+
+    <bean id="wheel17" class="com.topacademy.springapp.Wheel">
+        <property name="diameter" value="17"/>
+        <property name="weight" value="30"/>
+        <property name="price" value="95.8"/>
     </bean>
 
     <bean id="bodyT" class="com.topacademy.springapp.Body">
@@ -123,10 +129,10 @@
         <property name="priceMarkup" value="3%"/>
         <property name="wheel">
             <array>
-                <ref bean="wheel15"/>
-                <ref bean="wheel15"/>
-                <ref bean="wheel15"/>
-                <ref bean="wheel15"/>
+                <ref bean="wheel17"/>
+                <ref bean="wheel17"/>
+                <ref bean="wheel17"/>
+                <ref bean="wheel17"/>
             </array>
         </property>
     </bean>
