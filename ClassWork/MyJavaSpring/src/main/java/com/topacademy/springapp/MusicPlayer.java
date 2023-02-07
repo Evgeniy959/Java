@@ -8,7 +8,15 @@ public class MusicPlayer {
     private String name;
     private int volume;
 
+    /*private RockMusic rockMusic;
 
+    public RockMusic getRockMusic() {
+        return rockMusic;
+    }
+
+    public void setRockMusic(RockMusic rockMusic) {
+        this.rockMusic = rockMusic;
+    }*/
 
     public List<Music> getMusicList() {
         return musicList;

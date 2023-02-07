@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="engineT" class="com.topacademy.springapp.Engine">
+        <property name="numberHorsepower" value="150"/>
+        <property name="volume" value="2.5"/>
+        <property name="weight" value="200"/>
+        <property name="price" value="1950"/>
+    </bean>
+
+    <bean id="transmissionT" class="com.topacademy.springapp.Transmission">
+        <property name="numberTtransmissions" value="5"/>
+        <property name="type" value="automatic"/>
+        <property name="weight" value="50"/>
+        <property name="price" value="2000"/>
+    </bean>
+
+    <bean id="engineA" class="com.topacademy.springapp.Engine">
+        <property name="numberHorsepower" value="150"/>
+        <property name="volume" value="3.0"/>
+        <property name="weight" value="180"/>
+        <property name="price" value="2250"/>
+    </bean>
+
+    <bean id="transmissionA" class="com.topacademy.springapp.Transmission">
+        <property name="numberTtransmissions" value="5"/>
+        <property name="type" value="automatic"/>
+        <property name="weight" value="45"/>
+        <property name="price" value="2500"/>
+    </bean>
+
+    <bean id="engineB" class="com.topacademy.springapp.Engine">
+        <property name="numberHorsepower" value="150"/>
+        <property name="volume" value="3.5"/>
+        <property name="weight" value="200"/>
+        <property name="price" value="2950"/>
+    </bean>
+
+    <bean id="transmissionB" class="com.topacademy.springapp.Transmission">
+        <property name="numberTtransmissions" value="5"/>
+        <property name="type" value="automatic"/>
+        <property name="weight" value="70"/>
+        <property name="price" value="2900"/>
+    </bean>
+
+    <bean id="wheel16" class="com.topacademy.springapp.Wheel">
+        <property name="diameter" value="16"/>
+        <property name="weight" value="25"/>
+        <property name="price" value="80"/>
+    </bean>
+    <bean id="wheel15" class="com.topacademy.springapp.Wheel">
+        <property name="diameter" value="15"/>
+        <property name="weight" value="28"/>
+        <property name="price" value="85"/>
+    </bean>
+
+    <bean id="wheel17" class="com.topacademy.springapp.Wheel">
+        <property name="diameter" value="17"/>
+        <property name="weight" value="30"/>
+        <property name="price" value="95.8"/>
+    </bean>
+
+    <bean id="bodyT" class="com.topacademy.springapp.Body">
+        <property name="type" value="Crossover"/>
+        <property name="weight" value="850"/>
+        <property name="price" value="8000"/>
+    </bean>
+
+    <bean id="bodyA" class="com.topacademy.springapp.Body">
+        <property name="type" value="Sedan"/>
+        <property name="weight" value="700"/>
+        <property name="price" value="8500"/>
+    </bean>
+
+    <bean id="bodyB" class="com.topacademy.springapp.Body">
+        <property name="type" value="Crossover"/>
+        <property name="weight" value="900"/>
+        <property name="price" value="9500"/>
+    </bean>
+
+    <bean id="toyota" class="com.topacademy.springapp.Car">
+        <constructor-arg ref = "engineT"/>
+        <constructor-arg ref = "transmissionT"/>
+        <constructor-arg ref = "bodyT"/>
+        <property name="price" value="18500.75"/>
+        <property name="brand" value="Toyota"/>
+        <property name="name" value="Rav4"/>
+        <property name="priceMarkup" value="4%"/>
+        <property name="wheel">
+            <array>
+                <ref bean="wheel16"/>
+                <ref bean="wheel16"/>
+                <ref bean="wheel16"/>
+                <ref bean="wheel16"/>
+            </array>
+        </property>
+    </bean>
+    <bean id="audi" class="com.topacademy.springapp.Car">
+        <constructor-arg ref = "engineA"/>
+        <constructor-arg ref = "transmissionA"/>
+        <constructor-arg ref = "bodyA"/>
+        <property name="price" value="25700"/>
+        <property name="brand" value="Audi"/>
+        <property name="name" value="Q7"/>
+        <property name="priceMarkup" value="5%"/>
+        <property name="wheel">
+            <array>
+                <ref bean="wheel15"/>
+                <ref bean="wheel15"/>
+                <ref bean="wheel15"/>
+                <ref bean="wheel15"/>
+            </array>
+        </property>
+    </bean>
+
+    <bean id="bmw" class="com.topacademy.springapp.Car">
+        <constructor-arg ref = "engineB"/>
+        <constructor-arg ref = "transmissionB"/>
+        <constructor-arg ref = "bodyB"/>
+        <property name="price" value="26500.4"/>
+        <property name="brand" value="BMW"/>
+        <property name="name" value="X5"/>
+        <property name="priceMarkup" value="3%"/>
+        <property name="wheel">
+            <array>
+                <ref bean="wheel17"/>
+                <ref bean="wheel17"/>
+                <ref bean="wheel17"/>
+                <ref bean="wheel17"/>
+            </array>
+        </property>
+    </bean>
+</beans>
+
+

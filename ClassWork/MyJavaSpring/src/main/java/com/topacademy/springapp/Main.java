@@ -12,6 +12,8 @@ public class Main {
 
         System.out.println(musicPlayer.playMusic());
         System.out.println(musicPlayer.playMusicList());
+        System.out.println(musicPlayer.getMusic().getSong());
+        //System.out.println(musicPlayer.getSong()); // не будет работать
 
  //       TestBean testBean = context.getBean("testBean", TestBean.class);
         //       // TestBean testBean2 = context.getBean("testBean2",TestBean.class);
