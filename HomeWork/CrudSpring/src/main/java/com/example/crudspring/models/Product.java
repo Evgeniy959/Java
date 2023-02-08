@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
@@ -12,8 +13,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @ToString
 public class Product implements Serializable {
-    public String name;
-    public int price;
-    public int count;
+    private int id;
+    private String name;
+    private int price;
+    private int count;
 
 }

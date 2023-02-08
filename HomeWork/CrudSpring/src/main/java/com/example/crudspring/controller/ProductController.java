@@ -10,11 +10,11 @@ import java.util.List;
 @Controller
 //@RequestMapping("/product")
 public class ProductController {
-    public static List<Product> products=new ArrayList<>();
+    private static List<Product> products=new ArrayList<>();
+    private static int ID=1;
 
     @GetMapping("/product")
     //@GetMapping("")
-    //@RequestMapping(value = "", method = RequestMethod.GET)
     public String addProduct(Model model){
         Product product = new Product();
         model.addAttribute("product", product);
@@ -22,19 +22,28 @@ public class ProductController {
     }
     @GetMapping("/product/all")
     public String products(Model model){
-        /*products.add(new Product("dd", 2, 6));
-        products.add(new Product("ffffffffff", 74, 88888));*/
-        /*System.out.println(products.get(0));
-        System.out.println("products.get(0)");*/
-        model.addAttribute("product1", products);
+        model.addAttribute("products", products);
         return "all_products";
     }
     @PostMapping("/product")
     public String add(@ModelAttribute Product product){
+        products.add(new Product(ID++,"Яблоки", 150, 600));
+        products.add(new Product(ID++,"Бананы", 120, 885));
+        products.add(new Product(ID++,"Апельсины", 160, 450));
+        product.setId(ID++);
         products.add(product);
-        //products.add(new Product("dd", 2, 6));
         //System.out.println(product);
-        return "redirect: /product/all";
+        return "redirect:/product/all";
 
+    }
+    @GetMapping("/delete/{id}")
+    public String deleteProduct(@PathVariable("id") int id){
+        for (Product product:products) {
+            if (product.getId()==id){
+                products.remove(product);
+                break;
+            }
+        }
+        return "redirect:/product/all";
     }
 }
