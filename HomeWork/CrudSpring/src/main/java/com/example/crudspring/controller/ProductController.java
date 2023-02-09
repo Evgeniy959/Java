@@ -34,6 +34,25 @@ public class ProductController {
         products.add(product);
         //System.out.println(product);
         return "redirect:/product/all";
+    }
+
+    @PostMapping("/update")
+    public String update(@ModelAttribute Product product){
+        /*products.remove(product.getId()-1);
+        products.add(product.getId()-1, product);
+        return "redirect:/product/all";*/
+
+        // ---------------------------------------------------------
+        // Tак лучше:
+        for (Product prod:products) {
+            if (prod.getId()==product.getId()){
+                int index = products.indexOf(prod);
+                products.remove(index);
+                products.add(index, product);
+                break;
+            }
+        }
+        return "redirect:/product/all";
 
     }
     @GetMapping("/delete/{id}")
@@ -45,5 +64,16 @@ public class ProductController {
             }
         }
         return "redirect:/product/all";
+    }
+
+    @GetMapping("/update/{id}")
+    public String update(@PathVariable("id") int id, Model model){
+        for (Product product:products) {
+            if (product.getId()==id){
+                model.addAttribute("product", product);
+                break;
+            }
+        }
+        return "update_product";
     }
 }
