@@ -8,18 +8,17 @@
 <body>
 <form th:action="@{/update}" th:object="${product}" method="post">
   <div class="form-group">
-    <label>Id : </label>
-    <input name="id" th:field="*{id}" placeholder="Enter name" type="number" class="form-control" />
-    <label>Name : </label>
+    <input name="id" th:field="*{id}" type="hidden" class="form-control" />
+    <label>Name :</label>
     <input required name="name" th:field="*{name}" placeholder="Enter name" type="text" class="form-control" />
   </div>
   <div class="form-group">
-    <label>Price : </label>
-    <input  name="price" th:field="*{price}" placeholder="Enter price"  type="number" class="form-control" />
+    <label>Price :</label>
+    <input required name="price" th:field="*{price}" type="number" class="form-control" />
   </div>
   <div class="form-group">
-    <label>Count : </label>
-    <input required name="count" th:field="*{count}" placeholder="Enter count" type="number" class="form-control" ></input>
+    <label>Count :</label>
+    <input required name="count" th:field="*{count}" type="number" class="form-control" ></input>
   </div>
   <br />
   <div class="form-group">

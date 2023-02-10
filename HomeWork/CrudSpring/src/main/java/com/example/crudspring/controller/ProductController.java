@@ -38,17 +38,10 @@ public class ProductController {
 
     @PostMapping("/update")
     public String update(@ModelAttribute Product product){
-        /*products.remove(product.getId()-1);
-        products.add(product.getId()-1, product);
-        return "redirect:/product/all";*/
-
-        // ---------------------------------------------------------
-        // Tак лучше:
         for (Product prod:products) {
             if (prod.getId()==product.getId()){
                 int index = products.indexOf(prod);
-                products.remove(index);
-                products.add(index, product);
+                products.set(index, product);
                 break;
             }
         }
