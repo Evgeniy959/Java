@@ -25,7 +25,7 @@ public class Main {
     }
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        /*int count=0;
+        int count=0;
         for (int i=2; i<20; i++){
             if(i%2!=0||i==2){
                 count++;
@@ -33,7 +33,7 @@ public class Main {
             }
         }
         System.out.println();
-        System.out.println(count);*/
+        System.out.println(count);
         /*List<Character> str = new ArrayList<>(){};
         List<Character> listRes = new ArrayList<>(){};
 
