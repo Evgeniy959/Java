@@ -15,7 +15,6 @@
         <!--<th scope="col">Start</th>
         <th scope="col">End</th>-->
         <th scope="col">Persons count</th>
-        <th scope="col">Price,$</th>
         <th scope="col"></th>
         <th scope="col">Actions</th>
     </tr>
@@ -29,7 +28,6 @@
         <!--<td th:text = "${room.start}"/>
         <td th:text = "${room.end}"/>-->
         <td th:text = "${room.personsCount}"/>
-        <td th:text = "${room.price}"/>
         <td><div class="col-14"><a th:href="@{/add-person/{roomNumber} (roomNumber=${room.roomNumber})}" class="form-control btn btn-primary">Order</a></div></td>
         <!--<td><div class="col-14"><a th:href="@{/delete/{id} (id=${product.id})}" class="form-control btn btn-primary">Delete</a></div></td>-->
     </tr>

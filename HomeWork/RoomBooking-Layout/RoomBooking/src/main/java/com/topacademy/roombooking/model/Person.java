@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 @Entity
 @Table(name = "persons")
 public class Person {
@@ -20,7 +19,7 @@ public class Person {
     private Long id;
     private String firstname;
     private String email;
-    private String content;
+    private String phone;
     @Column(name = "room_number")
     private String roomNumber;
 

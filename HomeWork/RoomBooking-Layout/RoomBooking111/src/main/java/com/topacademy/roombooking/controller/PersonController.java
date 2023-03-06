@@ -25,13 +25,16 @@ public class PersonController {
     @GetMapping("/add-person/{roomNumber}")
     public String saveRoom(@PathVariable("roomNumber") String roomNumber, @ModelAttribute Person person, Model model){
         person.setRoomNumber(roomNumber);
+        //personService.savePerson(person);
         model.addAttribute("person", person);
         return "add-person";
     }
 
     @PostMapping("/add-person")
-    public String savePerson(@ModelAttribute Person person){
+    public String savePerson(/*@PathVariable("number") String number,*/ /*@ModelAttribute*/ Person person/*, Model model*/){
+        //person.number=number;
         personService.savePerson(person);
+        //model.addAttribute("person", person);
         return "message";
     }
 

@@ -20,8 +20,18 @@ public class RoomService {
         this.roomRepository = roomRepository;
     }
 
+    public Room findById(Long id){
+        //return roomRepository.getOne(id);
+        return roomRepository.getReferenceById(id);
+    }
+
     public List<Room> findByDate(LocalDateTime dateEnd, LocalDateTime dateStart){
         return roomRepository.findAllByStartAfterOrEndBeforeOrStartIsNull(dateEnd, dateStart);
+    }
+
+
+    public List<Room> findAll(){
+        return roomRepository.findAll();
     }
 
 }
