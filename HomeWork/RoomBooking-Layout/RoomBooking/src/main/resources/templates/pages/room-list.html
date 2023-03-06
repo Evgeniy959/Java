@@ -1,0 +1,28 @@
+<th:block th:fragment="content">
+    <table class="table">
+        <thead>
+        <tr class="tab-row">
+            <th scope="col">#</th>
+            <th scope="col">Number</th>
+            <th scope="col">Persons count</th>
+            <th scope="col">Price,$</th>
+            <th scope="col"></th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+        <tr th:each = "room: ${rooms}" class="tab-row">
+            <th scope="row" th:text="${room.id}"/>
+            <td th:text = "${room.roomNumber}"/>
+            <td th:text = "${room.personsCount}"/>
+            <td th:text = "${room.price}"/>
+            <td><div class="col-14"><a th:href="@{/add-person/{roomNumber} (roomNumber=${room.roomNumber})}" class="form-control btn btn-primary">Order</a></div></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+
+</th:block>
