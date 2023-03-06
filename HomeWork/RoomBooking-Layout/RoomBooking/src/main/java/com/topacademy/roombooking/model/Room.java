@@ -13,6 +13,7 @@ import java.time.LocalTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Entity
 @Table(name = "rooms")
 public class Room {
@@ -24,10 +25,13 @@ public class Room {
     @Column(name = "persons_count")
     private int  personsCount;
     @Column(name = "start_date")
+    //private LocalTime start;
     private LocalDateTime start;
     @Column(name = "end_date")
+    //private LocalTime end;
     private LocalDateTime end;
-    private int price;
+    /*@Column(name = "is_booked")
+    private boolean isBooked;*/
 
 
 }

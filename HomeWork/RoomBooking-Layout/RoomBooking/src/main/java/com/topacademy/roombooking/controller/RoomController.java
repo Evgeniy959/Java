@@ -30,6 +30,13 @@ public class RoomController {
         return "search";
     }
 
+    /*@PostMapping("/rooms")
+    public String saveRoom(Model model){
+        List<Person> persons = roomService.saveRoom();
+        model.addAttribute("persons", persons);
+        return "add-person";
+    }*/
+
     @PostMapping("/search")
     public String findByDate(@ModelAttribute Room room, Model model){
         List<Room> rooms = roomService.findByDate(room.getEnd(), room.getStart());
