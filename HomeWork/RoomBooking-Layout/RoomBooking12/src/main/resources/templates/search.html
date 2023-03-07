@@ -3,9 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <title>Search</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 <body>
+
+<!-- Page Preloder -->
+<div id="preloder" style="display: none;">
+    <div class="loader" style="display: none;"></div>
+</div>
+
+<!-- Offcanvas Menu Section Begin -->
+<div class="offcanvas-menu-overlay"></div>
+<div class="canvas-open">
+    <i class="icon_menu"></i>
+</div>
+<div class="offcanvas-menu-wrapper">
+    <div class="canvas-close">
+        <i class="icon_close"></i>
+    </div>
+    <div class="search-icon  search-switch">
+        <i class="icon_search"></i>
+    </div>
+    <div class="header-configure-area">
+        <div class="language-option">
+            <img src="img/flag.jpg" alt="">
+            <span>EN <i class="fa fa-angle-down"></i></span>
+            <div class="flag-dropdown">
+                <ul>
+                    <li><a href="#">Zi</a></li>
+                    <li><a href="#">Fr</a></li>
+                </ul>
+            </div>
+        </div>
+        <a href="#" class="bk-btn">Booking Now</a>
+    </div>
+    <nav class="mainmenu mobile-menu">
+        <ul>
+            <li class="active"><a href="./index.html">Home</a></li>
+            <li><a href="./rooms.html">Rooms</a></li>
+            <li><a href="./about-us.html">About Us</a></li>
+            <li><a href="./pages.html">Pages</a>
+                <ul class="dropdown">
+                    <li><a href="./room-details.html">Room Details</a></li>
+                    <li><a href="#">Deluxe Room</a></li>
+                    <li><a href="#">Family Room</a></li>
+                    <li><a href="#">Premium Room</a></li>
+                </ul>
+            </li>
+            <li><a href="./blog.html">News</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="mobile-menu-wrap"><div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed"><span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><nav class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+        <ul>
+            <li class="active"><a href="./index.html" role="menuitem">Home</a></li>
+            <li><a href="./rooms.html" role="menuitem">Rooms</a></li>
+            <li><a href="./about-us.html" role="menuitem">About Us</a></li>
+            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row"><a href="./pages.html">Pages</a>
+                <span class="slicknav_arrow">►</span></a><ul class="dropdown slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
+                <li><a href="./room-details.html" role="menuitem" tabindex="-1">Room Details</a></li>
+                <li><a href="#" role="menuitem" tabindex="-1">Deluxe Room</a></li>
+                <li><a href="#" role="menuitem" tabindex="-1">Family Room</a></li>
+                <li><a href="#" role="menuitem" tabindex="-1">Premium Room</a></li>
+            </ul>
+            </li>
+            <li><a href="./blog.html" role="menuitem">News</a></li>
+            <li><a href="./contact.html" role="menuitem">Contact</a></li>
+        </ul>
+    </nav></div></div>
+    <div class="top-social">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-tripadvisor"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+    <ul class="top-widget">
+        <li><i class="fa fa-phone"></i> (12) 345 67890</li>
+        <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+    </ul>
+</div>
+<!-- Offcanvas Menu Section End -->
+
+<!-- Header Section Begin -->
+<header class="header-section">
+    <div class="top-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="tn-left">
+                        <li><i class="fa fa-phone"></i> (12) 345 67890</li>
+                        <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tn-right">
+                        <div class="top-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                        <a href="#" class="bk-btn">Booking Now</a>
+                        <div class="language-option">
+                            <img src="img/flag.jpg" alt="">
+                            <span>EN <i class="fa fa-angle-down"></i></span>
+                            <div class="flag-dropdown">
+                                <ul>
+                                    <li><a href="#">Zi</a></li>
+                                    <li><a href="#">Fr</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="nav-menu">
+                        <nav class="mainmenu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Home</a></li>
+                                <li><a href="./rooms.html">Rooms</a></li>
+                                <li><a href="./about-us.html">About Us</a></li>
+                                <li><a href="./pages.html">Pages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="./room-details.html">Room Details</a></li>
+                                        <li><a href="./blog-details.html">Blog Details</a></li>
+                                        <li><a href="#">Family Room</a></li>
+                                        <li><a href="#">Premium Room</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./blog.html">News</a></li>
+                                <li><a href="./contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="nav-right search-switch">
+                            <i class="icon_search"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+<!-- Hero Section Begin-->
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="hero-text">
+                    <h1>Sona A Luxury Hotel</h1>
+                    <p>Here are the best hotel booking sites, including recommendations for international
+                        travel and for finding low-priced hotel rooms.</p>
+                    <a href="#" class="primary-btn">Discover Now</a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                <div class="booking-form">
+                    <h3>Booking Your Hotel</h3>
+                    <form action="#">
+                        <div class="check-date">
+                            <label for="date-in">Check In:</label>
+                            <input type="text" class="date-input hasDatepicker" id="date-in">
+                            <i class="icon_calendar"></i>
+                        </div>
+                        <div class="check-date">
+                            <label for="date-out">Check Out:</label>
+                            <input type="text" class="date-input hasDatepicker" id="date-out">
+                            <i class="icon_calendar"></i>
+                        </div>
+                        <div class="select-option">
+                            <label for="guest">Guests:</label>
+                            <select id="guest" style="display: none;">
+                                <option value="">2 Adults</option>
+                                <option value="">3 Adults</option>
+                            </select><div class="nice-select" tabindex="0"><span class="current">2 Adults</span><ul class="list"><li data-value="" class="option selected">2 Adults</li><li data-value="" class="option">3 Adults</li></ul></div>
+                        </div>
+                        <div class="select-option">
+                            <label for="room">Room:</label>
+                            <select id="room" style="display: none;">
+                                <option value="">1 Room</option>
+                                <option value="">2 Room</option>
+                            </select><div class="nice-select" tabindex="0"><span class="current">1 Room</span><ul class="list"><li data-value="" class="option selected">1 Room</li><li data-value="" class="option">2 Room</li></ul></div>
+                        </div>
+                        <button type="submit">Check Availability</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <h2>Room search</h2>
 <form th:action="@{/search}" th:object="${room}" method="post">
     <div class="form-group">
@@ -21,7 +232,15 @@
         <input type="submit"  class="form-control btn btn-primary"  value="Search"/>
     </div>
 </form>
-
+<!-- Js Plugins -->
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/jquery.nice-select.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="/js/jquery.slicknav.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/main.js"></script><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
 
 </body>
 </html>
